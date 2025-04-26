@@ -39,7 +39,18 @@ DELETE	/alunos/{id}	Remove um aluno
 Acesse o console do H2 (JDBC URL: jdbc:h2:mem:alunodatabase, User: sa)
 
 Documentação técnica detalhada (configurações do Spring Boot e Gradle)
+## 🗄️ Acesso ao Banco de Dados H2
 
+O console administrativo está disponível durante o desenvolvimento:
+
+🔗 [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+
+**Credenciais padrão:**
+```yaml
+JDBC URL: jdbc:h2:mem:alunodb
+User Name: sa
+Password: 
+```
 # 📌 **Roadmap**
 
 Validações avançadas

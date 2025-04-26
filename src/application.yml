@@ -1,13 +1,20 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:alunodatabase
-    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:alunodb;DB_CLOSE_DELAY=-1  # Nome fixo + evita fechamento automático
+    driver-class-name: org.h2.Driver
     username: sa
     password:
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    properties:
+      hibernate:
+        format_sql: true  # Melhora a legibilidade dos logs SQL
   h2:
     console:
       enabled: true
+      path: /h2-console  # Define a URL de acesso
+      settings:
+        trace: false  # Desativa logs extensos
+        web-allow-others: false  # Segurança: só acessível localmente
